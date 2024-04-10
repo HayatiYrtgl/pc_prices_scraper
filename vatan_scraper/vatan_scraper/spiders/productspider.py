@@ -18,4 +18,4 @@ class ProductspiderSpider(scrapy.Spider):
                 yield scrapy.Request(url=url["urls"], callback=self.parse_product)
 
     def parse_product(self, response):
-        yield {"m": response.css("ul.pdetail-property-list li::text").get()}
+        yield {"m": response.css("ul.pdetail-property-list li span::text").getall()}
