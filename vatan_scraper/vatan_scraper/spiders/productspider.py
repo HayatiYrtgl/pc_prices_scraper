@@ -1,5 +1,5 @@
 import scrapy
-
+import json
 
 class ProductspiderSpider(scrapy.Spider):
     # name
