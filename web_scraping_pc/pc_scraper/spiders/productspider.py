@@ -13,7 +13,7 @@ class ProductspiderSpider(scrapy.Spider):
 
     def parse(self, response):
         # url
-        with open("/home/charon5/web_scraping/web_scraping/vatan_scraper/vatan_scraper/products_urls.json", "r", encoding="utf-8") as file:
+        with open("/web_scraping_pc/pc_scraper/products_urls.json", "r", encoding="utf-8") as file:
             for url in json.loads(file.read()):
                 yield scrapy.Request(url=url["urls"], callback=self.parse_product, cb_kwargs={"url": url["urls"]})
 
