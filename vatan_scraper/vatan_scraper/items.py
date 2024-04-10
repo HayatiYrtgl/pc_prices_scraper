@@ -19,3 +19,5 @@ class ProductSpider(scrapy.Item):
     processor_gen = scrapy.Field()
     processor_brand = scrapy.Field()
     ram_type = scrapy.Field()
+    processor_boost = scrapy.Field()
+    processor_id = scrapy.Field()
